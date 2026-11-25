@@ -1,0 +1,64 @@
+Panels:
+  - Class: rviz/Displays
+    Name: Displays
+Visualization Manager:
+  Class: ""
+  Displays:
+    - Class: rviz/Grid
+      Name: Grid
+      Enabled: true
+      Cell Size: 1
+      Plane Cell Count: 40
+      Reference Frame: <Fixed Frame>
+    - Class: rviz/PointCloud2
+      Name: lidar
+      Enabled: true
+      Topic: /cloud_registered_body
+      Size (m): 0.05
+      Style: Points
+      Color Transformer: AxisColor
+      Axis: Z
+      Decay Time: 0
+    - Class: rviz/Marker
+      Name: columns with utility (green counts, grey cut)
+      Enabled: true
+      Marker Topic: /ari3d/columns
+    - Class: rviz/Path
+      Name: route
+      Enabled: true
+      Topic: /ari3d/route
+      Color: 214; 48; 111
+      Line Style: Billboards
+      Line Width: 0.08
+    - Class: rviz/Path
+      Name: flown setpoints
+      Enabled: true
+      Topic: /dynamicExploration/bspline_trajectory
+      Color: 42; 120; 214
+    - Class: rviz/TF
+      Name: TF
+      Enabled: true
+      Show Names: false
+  Global Options:
+    Background Color: 48; 48; 48
+    Fixed Frame: map
+    Frame Rate: 20
+  Name: root
+  Tools:
+    - Class: rviz/Interact
+    - Class: rviz/MoveCamera
+  Value: true
+  Views:
+    Current:
+      Class: rviz/Orbit
+      Distance: 40
+      Focal Point:
+        X: 12
+        Y: 10
+        Z: 2
+      Pitch: 0.9
+      Yaw: 0.8
+    Saved: ~
+Window Geometry:
+  Height: 900
+  Width: 1400
